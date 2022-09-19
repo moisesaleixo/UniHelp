@@ -5,7 +5,10 @@
     $usuario = "root";
     $senha = "root";
 
-    $msqli = new mysqli($hostname, $usuario, $senha, $bancodedados);
-    if ($msqli->connect_errno) {
-        echo "Falha ao conectar: (" . $msqli->connect_errno . ")" . $msqli->connect_error; 
+    $conecao = new mysqli($hostname, $usuario, $senha, $bancodedados);
+
+    if ($conecao -> connect_errno) {
+        echo "Erro";
+    }else{
+        echo "Conexão bem sucessida";
     }
