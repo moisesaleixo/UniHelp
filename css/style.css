@@ -47,7 +47,6 @@ main{
     justify-content: center;
     flex-direction: row;
     margin-top: 10px;
-    justify-content: space-evenly;
     font-size: 1.3rem;
 }
 
@@ -55,6 +54,22 @@ main{
     color: gray;
     text-decoration: none;
     font-weight: normal;
+    padding: 0px 30px;
+}
+
+nav a::after{
+    content: "";
+    width: 0%;
+    height: 3px;
+    border-radius: 30px;
+    background-color: aqua;
+    display: flex;
+    margin-top: 5px;
+}
+
+nav a:hover::after{
+    width: 100%;
+    transition: .3s;
 }
 
 /* Formulário */
@@ -132,4 +147,21 @@ form input{
 
 .logo_cadastro{
     margin-top: 10%;
+}
+
+select, option{
+    color: gray;
+}
+
+input{
+    color: aqua;
+}
+
+@media (width: 50%) {
+    #esquerda{
+        background-image: none;
+    }
+    #direita{
+        width: 100%;
+    }
 }
