@@ -129,3 +129,7 @@ form input{
     color: black;
     transition: .1s;
 }
+
+.logo_cadastro{
+    margin-top: 10%;
+}
