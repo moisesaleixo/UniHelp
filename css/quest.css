@@ -1,0 +1,27 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+}
+
+.logoimg{
+    display: inline;
+}
+
+header{
+    background: linear-gradient(to bottom right, #011B4A 0%, #014F86 100%);
+    width: 100%;
+    position: absolute;
+    display: flex;
+    justify-content: space-around;
+}
+
+
+
+section{
+    width: 1000px;
+    height: 100vh;
+    background-color: gray;
+    margin: 0 auto;
+}
+
