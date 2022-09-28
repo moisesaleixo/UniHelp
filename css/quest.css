@@ -1,27 +1,53 @@
+/* Zerando configurações da página */
 *{
     margin: 0;
     box-sizing: border-box;
     padding: 0;
 }
 
-.logoimg{
-    display: inline;
-}
-
+/* Cabeçalho */
 header{
     background: linear-gradient(to bottom right, #011B4A 0%, #014F86 100%);
     width: 100%;
-    position: absolute;
     display: flex;
+    align-items: center;
     justify-content: space-around;
 }
 
+/* Links do cabeçalho */
+header a{
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-style: normal;
+    padding: 0px 10px;
+}
 
+/* Estilização dos links */
+.link_design:hover{
+    background-color: aqua;
+    border-radius: 30px;
+    color: black;
+}
 
+/* Seção das questões */
 section{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    flex-direction: row;
     width: 1000px;
     height: 100vh;
     background-color: gray;
     margin: 0 auto;
 }
 
+/* Task */
+section > .task{
+    width: 500px;
+    height: 250px;
+    background-color: white;
+    margin-top: 10px;
+    /*------------------------*/
+    border-radius: 10px;
+}

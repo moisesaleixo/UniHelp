@@ -10,6 +10,7 @@
     overflow-y: hidden;
 }
 
+/* configurações gerais */
 main{
     display: flex;
     justify-content: center;
@@ -29,11 +30,13 @@ main{
     background: linear-gradient(to bottom right, #011B4A 0%, #014F86 100%);
 }
 
+/* Posição na página */
 .dados_ordem{
     margin-top: 20vh;
     font-size: 16px;
 }
 
+/* Organizando a logo */
 .logo{
     display: flex;
     align-items: center;
@@ -42,6 +45,7 @@ main{
     color: white;
 }
 
+/* Redirecionamento da página */
 .links_pages{
     display: flex;
     align-items: center;
@@ -51,6 +55,7 @@ main{
     font-size: 1.3rem;
 }
 
+/* Estilização dos links de redirecionamento */
 .links_pages a, h3{
     color: gray;
     text-decoration: none;
@@ -58,6 +63,7 @@ main{
     padding: 0px 30px;
 }
 
+/* Animação dos links de redirecionamento */
 nav a::after{
     content: "";
     width: 0%;
@@ -81,14 +87,12 @@ form{
     flex-direction: column;
 }
 
+/* Distanciamento dos inputs */
 form input{
     margin: 15px;
 }
 
-.superior{
-    margin-top: 10vh;
-}
-
+/* Formato dos inputs */
 .detalhe{
     padding: 5px;
     width: calc(50vw - 25vw);
@@ -125,11 +129,11 @@ form input{
     background: none;
     border: 1px solid gray;
     color: gray;
+    text-align: center;
 }
 
 .buttom:hover{
     background-color: aqua;
-    color: none;
     border: none;
     font-weight: bold;
     transition: .2s;
@@ -145,30 +149,21 @@ form input{
 .esqueci_senha:hover{
     color: black;
     transition: .1s;
+    text-decoration: underline;
 }
 
+/* Distanciamento da logo - Cadastro */
 .logo_cadastro{
     margin-top: 10%;
 }
 
+/* Cor do input das areas do conhecimento */
 select, option{
     color: gray;
 }
 
+/* Cor da escrita dos inputs */
 input{
     color: aqua;
 }
 
-@media (width: 50%) {
-    #esquerda{
-        background-image: none;
-    }
-    #direita{
-        width: 100%;
-    }
-}
-
-.dia{
-    background-color: red;
-    color: rebeccapurple;
-}
