@@ -23,18 +23,18 @@
                             <h1>UniHelp</h1>
                         </div><!--Logo-->
                         <nav class="links_pages"><!--Links-->
-                            <a href="index.html">Entrar</a>
+                            <a href="index.php">Entrar</a>
                             <h3>ou</h3>
-                            <a href="cadastro.html">Cadastrar</a>
+                            <a href="cadastro.php">Cadastrar</a>
                         </n><!--Links-->
                     </div>
                 </div><!--Dados-->
             </div><!--fundo direita-->
             <div id="fundo_direita"><!--formulário-->
                 <form class="form_cadastro" action="" method="post" width: 50vw;>
-                    <input class="superior detalhe" type="text" name="" id="" placeholder="Nome">
-                    <input class="detalhe" type="text" name="" id="" placeholder="Sobrenome">
-                    <input class="detalhe" type="text" name="" id="" placeholder="Idade">
+                    <input class="superior detalhe" type="text" name="nome" id="" placeholder="Nome">
+                    <input class="detalhe" type="text" name="sobrenome" id="" placeholder="Sobrenome">
+                    <input class="detalhe" type="text" name="data_nasc" id="" placeholder="Idade">
                     <select class="detalhe" name="" id="">
                         <option value="">Ciências Agrária</option>
                         <option value="">Ciências Biológicas</option>
@@ -46,10 +46,10 @@
                         <option value="">Linguística, Letras e Artes</option>
                         
                     </select>
-                    <input class="detalhe" type="text" name="" id="" placeholder="Curso">
-                    <input class="detalhe" type="text" name="" id="" placeholder="Email">
-                    <input class="detalhe" type="text" name="" id="" placeholder="Senha">
-                    <input class="detalhe" type="text" name="" id="" placeholder="Confirmação da senha">
+                    <input class="detalhe" type="text" name="curso" id="" placeholder="Curso">
+                    <input class="detalhe" type="text" name="email" id="" placeholder="Email">
+                    <input class="detalhe" type="text" name="senha" id="" placeholder="Senha">
+                    <input class="detalhe" type="text" name="sonf_senha" id="" placeholder="Confirmação da senha">
 
                     <div><!--Botão Envias-->
                         <input type="submit" value="Cadastrar" type="button" class="buttom">

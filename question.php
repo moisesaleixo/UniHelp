@@ -1,3 +1,7 @@
+<?php
+
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -12,23 +16,21 @@
     <main>
         <header>
             <div class="logoimg">
-                <a href="question.html"><img src="pictures/logo1.png" alt=""></a>
+                <a href="question.php"><img src="pictures/logo1.png" alt=""></a>
             </div>
             <div>
                 <nav>
                     <ul>
                         <i><a class="link_design" href="">Perfil</a></i>
                         <i><a class="link_design" href="">Configurações</a></i>
-                        <i><a class="link_design" href="index.html">Sair</a></i>
+                        <i><a class="link_design" href="logout.php">Sair</a></i>
                     </ul>
                 </nav>
             </div>
         </header>
 
         <section>
-            <div class="task">
-
-            </div>
+            
         </section>
 
         <footer>

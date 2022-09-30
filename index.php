@@ -22,22 +22,22 @@
                             <h1>UniHelp</h1>
                         </div>
                         <nav class="links_pages">
-                            <a href="index.html">Entrar</a>
+                            <a href="index.php">Entrar</a>
                             <h3>ou</h3>
-                            <a href="cadastro.html">Cadastrar</a>
+                            <a href="cadastro.php">Cadastrar</a>
                         </nav>
                     </div>
                 </div><!--Dados-->
             </div><!--fundo direita-->
             <div id="fundo_direita">
                 <form action="" method="post" width: 50vw;>                    
-                        <input class="superior detalhe" type="email" name="" id="" placeholder="E-mail">
+                        <input class="superior detalhe" type="email" name="email" id="" placeholder="E-mail">
                     
-                        <input class="detalhe" type="password" name="" id="" placeholder="Senha">
+                        <input class="detalhe" type="password" name="senha" id="" placeholder="Senha">
                     
                         <div>
                             <input class="buttom"  type="buttom" value="Entrar">
-                            <a href="question.html" class="esqueci_senha">Esqueci minha senha!</a>
+                            <a href="question.php" class="esqueci_senha">Esqueci minha senha!</a>
                         </div>   
                 </form>
             </div>
