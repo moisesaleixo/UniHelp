@@ -15,19 +15,24 @@ header{
 }
 
 /* Links do cabeçalho */
-header a{
+header .link{
+    display: inline;
+    align-items: center;
+}
+
+.dados{
+    padding: 0 10px;
     color: white;
     text-decoration: none;
     font-weight: bold;
-    font-style: normal;
-    padding: 0px 10px;
 }
 
-/* Estilização dos links */
-.link_design:hover{
+.dados:hover{
+    color: black;
     background-color: aqua;
     border-radius: 30px;
-    color: black;
+    transition: .2s;
+    padding: 10px;
 }
 
 /* Seção das questões */
@@ -41,3 +46,49 @@ section{
     background-color: gray;
     margin: 0 auto;
 }
+
+/* Foto usuário */
+.foto_user{
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 0;
+    left: 10px;
+    background-color: white;
+    border-radius: 50%;
+    z-index: 10;
+}
+
+@media screen and (max-width: 700px) {
+    header{
+        width: 100%;
+        margin: 0 auto;
+    }
+    nav{
+        display: none;
+    }
+    .hamburger_menu {
+        width: 50px;
+        height: 50px;
+        display: block;
+        border: none;
+        padding: 0px;
+        background: linear-gradient(
+          to bottom, 
+          #3D0E61, #3D0E61 20%, 
+          white 0%, white 0%, 
+          #3D0E61 40%, #3D0E61 60%, white 0%, white 0%,
+          #3D0E61 80%, #3D0E61 100%
+        );
+    }
+    
+    .hamburger_menu .sidebar_menu {
+        visibility: hidden;
+        width: 50px;
+        height: 100%;
+        background-color: #3D0E61;
+        padding: 0px 10px;
+        box-sizing: border-box;
+    }
+}
+
