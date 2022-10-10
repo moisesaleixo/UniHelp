@@ -30,39 +30,23 @@
             </div>
         </header>
 
-        <div>
-            <input class="foto_user" type="file" accept="image/*">
-        </div>
-
-    </main>
-
-
-
-<!--
-    <main>
-        <header>
-            <div class="logoimg">
-                <a href="question.php"><img src="pictures/logo1.png" alt=""></a>
-            </div>
+        <section id="foto">
             <div>
-                <nav>
-                    <ul>
-                        <i><a class="link_design" href="">Perfil</a></i>
-                        <i><a class="link_design" href="">Configurações</a></i>
-                        <i><a class="link_design" href="logout.php">Sair</a></i>
-                    </ul>
-                </nav>
+                <input class="foto_user" type="file" accept="image/*">
             </div>
-        </header>
-
-        <section>
-            
+        </section>
+        <section id="area_textos">
+            <div class="area">
+                <div class="texto">
+                    <textarea placeholder="Sua pergunta aqui" name="" id="" cols="30" rows="10"></textarea>
+                </div>
+                <div>
+                    
+                </div>
+            </div>
         </section>
 
-        <footer>
-
-        </footer>
     </main>
--->
+
 </body>
 </html>

@@ -3,92 +3,119 @@
     margin: 0;
     box-sizing: border-box;
     padding: 0;
+    font-size: 16px;
 }
 
 /* Cabeçalho */
 header{
-    background: linear-gradient(to bottom right, #011B4A 0%, #014F86 100%);
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-}
-
-/* Links do cabeçalho */
-header .link{
-    display: inline;
-    align-items: center;
-}
-
-.dados{
-    padding: 0 10px;
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-.dados:hover{
-    color: black;
-    background-color: aqua;
-    border-radius: 30px;
-    transition: .2s;
-    padding: 10px;
-}
-
-/* Seção das questões */
-section{
-    display: flex;
-    text-align: center;
-    justify-content: center;
-    flex-direction: row;
-    width: 1000px;
-    height: 100vh;
-    background-color: gray;
-    margin: 0 auto;
-}
-
-/* Foto usuário */
-.foto_user{
-    width: 50px;
-    height: 50px;
     position: absolute;
     top: 0;
-    left: 10px;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    background: linear-gradient(to bottom right, #011B4A 0%, #014F86 100%);
+    padding: 10px 40px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+/* Animação e organização dos links */
+.sidebar_menu{
+    display: flex;
+    align-items: center;
+}
+
+header nav ul{
+    position: relative;
+    display: flex;
+    gap: 30px;
+}
+
+header nav ul li{
+    list-style: none;
+}
+
+header nav ul li a{
+    position: relative;
+    text-decoration: none;
+    font-size: 1rem;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+}
+
+header nav ul li a::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background: white;
+    bottom: -3px;
+    transform: scaleX(0);
+    transition: transform .5s ease-in-out;
+    transform-origin: right; 
+}
+
+header nav ul li a:hover::before{
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+/* Foto */
+#foto{
+    position: absolute;
+    z-index: 11;
+    width: 70px;
+    height: 70px;
+    background: aqua;
+    border: 3px solid black;
+    border-radius: 50px;
+    top: 5px;
+    left: 100px;
+    display: flex;
+    align-items: center;
+}
+
+/* Área das perguntas */
+#area_textos{
+    display: flex;
+    background-color: gray;
+    width: 900px;
+    height: 100vh;
+    margin: 0 auto;
+    z-index: 1;
+}
+
+.area{
+    display: flex;
+    position: absolute;
+    width: 600px;
+    height: 200px;
+    align-items: center;
+    justify-content: center;
+    margin: 100px 150px;
     background-color: white;
-    border-radius: 50%;
-    z-index: 10;
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 70%);
 }
 
-@media screen and (max-width: 700px) {
-    header{
-        width: 100%;
-        margin: 0 auto;
-    }
-    nav{
-        display: none;
-    }
-    .hamburger_menu {
-        width: 50px;
-        height: 50px;
-        display: block;
-        border: none;
-        padding: 0px;
-        background: linear-gradient(
-          to bottom, 
-          #3D0E61, #3D0E61 20%, 
-          white 0%, white 0%, 
-          #3D0E61 40%, #3D0E61 60%, white 0%, white 0%,
-          #3D0E61 80%, #3D0E61 100%
-        );
-    }
-    
-    .hamburger_menu .sidebar_menu {
-        visibility: hidden;
-        width: 50px;
-        height: 100%;
-        background-color: #3D0E61;
-        padding: 0px 10px;
-        box-sizing: border-box;
-    }
+.texto{
+    position: relative;
+    margin: 0 auto;
+    margin-top: -70px;
 }
 
+.texto textarea{
+    width: 570px;
+    height: 100px;
+    border-radius: 10px;
+    border: none;
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 50%);
+}
+
+@media screen and (max-width: 600px) {
+    header nav ul li a{
+        font-size: 5rem;
+    }
+}

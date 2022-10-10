@@ -28,4 +28,24 @@ Requisitos
 
 
 
-- Banco de dados - modelagem
+- Banco de dados - modelagem:
+    - Cadastro de pessoas
+        - id (AUTO_INCREMENT) 
+        - Nome;
+        - Sobrenome;
+        - Idade - data_nascimento;
+        - Área do conhecimento;
+        - Curso;
+        - E-mail (PK);
+        - Senha - Confirmação;
+
+    - Cadastro de dúvidas:
+        - id da dúvida (PK) (AUTO_INCREMENT);
+        - Area do conhecimento da dúvida;
+        - Título da dúvida;
+        - dúvida;
+        - E-mail de quem fez a pergunta (SK);
+
+    - Cadastro respostas:
+        - resposta;
+        - dúvida (SK);
