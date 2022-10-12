@@ -12,3 +12,5 @@
     }else{
         echo "Conexão bem sucessida";
     }
+
+?>

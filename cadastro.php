@@ -31,11 +31,11 @@
                 </div><!--Dados-->
             </div><!--fundo direita-->
             <div id="fundo_direita"><!--formulário-->
-                <form class="form_cadastro" action="" method="post" width: 50vw;>
+                <form class="form_cadastro" action="valida_cadastro.php" method="post" width: 50vw;>
                     <input class="superior detalhe" type="text" name="nome" id="" placeholder="Nome">
                     <input class="detalhe" type="text" name="sobrenome" id="" placeholder="Sobrenome">
                     <input class="detalhe" type="text" name="data_nasc" id="" placeholder="Data Nascimento">
-                    <select class="detalhe" name="" id="">
+                    <select class="detalhe" name="area_conhecimento" id="">
                         <option value="">Ciências Agrária</option>
                         <option value="">Ciências Biológicas</option>
                         <option value="">Ciências Exatas e da Terra</option>/
@@ -48,10 +48,10 @@
                     <input class="detalhe" type="text" name="curso" id="" placeholder="Curso">
                     <input class="detalhe" type="text" name="email" id="" placeholder="Email">
                     <input class="detalhe" type="text" name="senha" id="" placeholder="Senha">
-                    <input class="detalhe" type="text" name="sonf_senha" id="" placeholder="Confirmação da senha">
+                    <input class="detalhe" type="text" name="conf_senha" id="" placeholder="Confirmação da senha">
 
                     <div><!--Botão Envias-->
-                        <input type="submit" value="Cadastrar" type="button" class="buttom">
+                        <input type="submit" value="Cadastrar" type="submit" class="buttom">
                     </div><!--Botão Envias-->
                 </form>
             </div><!--formulário-->
