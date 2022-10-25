@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Questionário</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="../css/quest.css">
 </head>
 <body>
 
@@ -13,7 +13,7 @@
 
         <header>
             <div class="logo">
-                <a href="question.php"><img src="pictures/logo2.png" alt=""></a>
+                <a href="question.php"><img src="../pictures/logo2.png" alt=""></a>
             </div>
             <div class="hamburger_menu">
                 <nav class="sidebar_menu">

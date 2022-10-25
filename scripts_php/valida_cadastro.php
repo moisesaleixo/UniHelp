@@ -16,11 +16,12 @@
         echo "Valores incorretos, digite novamente!";
     }
     
+
     if(isset($_POST['email'])){
         $email = $_POST['email'];
         
         $con = mysqli_connect($localhost, "root", "root", "cadastro");
-        $sql = mysqli_query($con ,`SELECT * FROM usuarios WHERE email = $email`);
+        $sql = mysqli_query($con ,`SELECT * FROM usuarios WHERE email = $email`) or print mysqli_error($con);
         
         if(mysqli_num_rows($sql) > 0){
             echo "E-mail já cadastrado!";

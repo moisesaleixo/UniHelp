@@ -134,7 +134,6 @@ form input{
 
 .buttom:hover{
     background-color: aqua;
-    border: none;
     font-weight: bold;
     transition: .2s;
     color: black;
@@ -143,7 +142,7 @@ form input{
 /* Esqueci a senha */
 .esqueci_senha{
     text-decoration: none;
-    color: rgb(74, 74, 74);
+    color: gray;
 }
 
 .esqueci_senha:hover{
@@ -167,8 +166,19 @@ input{
     color: aqua;
 }
 
-@media screen and (max-width: 800px) {
+/* Botão de voltar  */
+.buttom_voltar{
+    color: gray;
+    text-decoration: none;
+    border: 1px solid gray;
+    padding: 5px 10px;
+    background: none;
+    border-radius: 30px;
+}
 
-    
-    
+.buttom_voltar:hover{
+    background-color: aqua;
+    font-weight: bold;
+    color: black;
+    transition: .2s;
 }

@@ -13,8 +13,8 @@
     <main>
         <section id="esquerda"><!--fundo da esquerda-->
             <img src="imagens_modelo/earth-5272550_1280.png" alt="">
-        </section><!--fundo da esquerda-->
-        <section id="direita"><!--Logino-->
+        </section><!--fim fundo da esquerda-->
+        <section id="direita"><!--Login-->
             <div><!--fundo direita-->
                 <div class="dados_ordem"><!--Dados-->
                     <div>
@@ -24,11 +24,11 @@
                         <nav class="links_pages">
                             <a href="index.php">Entrar</a>
                             <h3>ou</h3>
-                            <a href="cadastro.php">Cadastrar</a>
+                            <a href="scripts_php/cadastro.php">Cadastrar</a>
                         </nav>
                     </div>
-                </div><!--Dados-->
-            </div><!--fundo direita-->
+                </div><!--fim Dados-->
+            </div><!--fim fundo direita-->
             <div id="fundo_direita">
                 <form action="" method="post" width: 50vw;>                    
                         <input class="superior detalhe" type="email" name="email" id="" placeholder="E-mail">
@@ -36,12 +36,12 @@
                         <input class="detalhe" type="password" name="senha" id="" placeholder="Senha">
                     
                         <div>
-                            <input class="buttom"  type="buttom" value="Entrar">
-                            <a href="question.php" class="esqueci_senha">Esqueci minha senha!</a>
+                            <input class="buttom"  type="submit" value="Entrar">
+                            <a href="scripts_php/question.php" class="esqueci_senha">Esqueci minha senha!</a>
                         </div>   
                 </form>
             </div>
-        </section><!--Login-->
+        </section><!--fim Login-->
     </main>
     
 </body>

@@ -5,14 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="shortcut icon" href="pictures/ponto-de-interrogacao.png" type="image/x-icon">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="shortcut icon" href="../pictures/ponto-de-interrogacao.png" type="image/x-icon">
 </head>
 <body>
     
     <main>
         <section id="esquerda"><!--fundo da esquerda-->
-            <img src="imagens_modelo/earth-5272550_1280.png" alt="">
+            <img src="../imagens_modelo/earth-5272550_1280.png" alt="">
         </section><!--fundo da esquerda-->
 
         <section id="direita"><!--Cadastro-->
@@ -23,7 +23,7 @@
                             <h1>UniHelp</h1>
                         </div><!--Logo-->
                         <nav class="links_pages"><!--Links-->
-                            <a href="index.php">Entrar</a>
+                            <a href="../index.php">Entrar</a>
                             <h3>ou</h3>
                             <a href="cadastro.php">Cadastrar</a>
                         </n><!--Links-->
@@ -52,6 +52,7 @@
 
                     <div><!--Botão Envias-->
                         <input type="submit" value="Cadastrar" type="submit" class="buttom">
+                        <a href="../index.php" class="buttom_voltar">Voltar</a>
                     </div><!--Botão Envias-->
                 </form>
             </div><!--formulário-->
