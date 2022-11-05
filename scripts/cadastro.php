@@ -34,22 +34,9 @@
                 <form class="form_cadastro" action="valida_cadastro.php" method="post" width: 50vw;>
                     <input class="superior detalhe" type="text" name="nome" id="" placeholder="Nome">
                     <input class="detalhe" type="text" name="sobrenome" id="" placeholder="Sobrenome">
-                    <input class="detalhe" type="text" name="data_nasc" id="" placeholder="Data Nascimento">
-                    <select class="detalhe" name="area_conhecimento" id="">
-                        <option value="">Ciências Agrária</option>
-                        <option value="">Ciências Biológicas</option>
-                        <option value="">Ciências Exatas e da Terra</option>/
-                        <option value="">Ciências Humanas</option>
-                        <option value="">Ciências da Saúde</option>
-                        <option value="">Ciências Sociais Aplicadas</option>
-                        <option value="">Engenharias</option>
-                        <option value="">Linguística, Letras e Artes</option>
-                    </select>
                     <input class="detalhe" type="text" name="curso" id="" placeholder="Curso">
                     <input class="detalhe" type="text" name="email" id="" placeholder="Email">
-                    <input class="detalhe" type="text" name="senha" id="" placeholder="Senha">
-                    <input class="detalhe" type="text" name="conf_senha" id="" placeholder="Confirmação da senha">
-
+                    <input class="detalhe" type="password" name="senha" id="" placeholder="Senha">
                     <div><!--Botão Envias-->
                         <input type="submit" value="Cadastrar" type="submit" class="buttom">
                         <a href="../index.php" class="buttom_voltar">Voltar</a>

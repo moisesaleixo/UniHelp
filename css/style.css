@@ -1,3 +1,10 @@
+/* Variaveis */
+:root{
+    --cor-gradiente: linear-gradient(to bottom right, #011B4A 0%, #014F86 100%);
+    --cor-detalhes-letras: gray;
+    --cor-escrita: aqua;
+}
+
 /* Configurações da página */
 *{
     margin: 0;
@@ -27,7 +34,7 @@ main{
 #direita{
     width: 50vw;
     height: 100vh;
-    background: linear-gradient(to bottom right, #011B4A 0%, #014F86 100%);
+    background: var(--cor-gradiente);
 }
 
 /* Posição na página */
@@ -69,7 +76,7 @@ nav a::after{
     width: 0%;
     height: 3px;
     border-radius: 30px;
-    background-color: aqua;
+    background-color: var(--cor-escrita);
     display: flex;
     margin-top: 5px;
 }
@@ -105,7 +112,7 @@ form input{
     outline: 0;
     box-sizing: border-box;
     border-bottom: 1px solid gray;
-    color: aqua;
+    color: var(--cor-escrita);
 }
 
 /* Formulário cadastro */
@@ -142,7 +149,7 @@ form input{
 /* Esqueci a senha */
 .esqueci_senha{
     text-decoration: none;
-    color: gray;
+    color: var(--cor-detalhes-letras);
 }
 
 .esqueci_senha:hover{
@@ -158,17 +165,17 @@ form input{
 
 /* Cor do input das areas do conhecimento */
 select, option{
-    color: gray;
+    color: var(--cor-detalhes-letras);
 }
 
 /* Cor da escrita dos inputs */
 input{
-    color: aqua;
+    color: var(--cor-escrita);
 }
 
 /* Botão de voltar  */
 .buttom_voltar{
-    color: gray;
+    color: var(--cor-detalhes-letras);
     text-decoration: none;
     border: 1px solid gray;
     padding: 5px 10px;
@@ -177,8 +184,55 @@ input{
 }
 
 .buttom_voltar:hover{
-    background-color: aqua;
+    background-color: var(--cor-escrita);
     font-weight: bold;
     color: black;
     transition: .2s;
+}
+
+/* Configurações do esqueci minha senha */
+#esqueci_senha_page{
+    display: flex;
+    background: var(--cor-gradiente);
+    width: 500px;
+    height: 100vh;
+    margin: 0 auto;
+}
+
+.esqueci_senha_page{
+    width: 250px;
+    height: 25px;
+    background: none;
+    border: none;
+    border-bottom: 1px solid gray;
+    padding: 10px;
+}
+
+.esqueci_senha_page:focus{
+    outline: 0;
+    border-bottom: 1px solid gray;
+    color: var(--cor-escrita);
+}
+
+.botao_esqueci_page{
+    width: 100px;
+    color: var(--cor-detalhes-letras);
+    background: none;
+    border: none;
+    border: 1px solid gray;
+    border-radius: 30px;
+    padding: 5px 10px;
+}
+
+.botao_esqueci_page:hover{
+    background: var(--cor-escrita);
+    color: black;
+    cursor: pointer;
+}
+
+p .aviso{
+    background-color: lightpink;
+    padding: 5px;
+    border-radius: 30px;
+    border: none;
 }
