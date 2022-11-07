@@ -2,26 +2,18 @@
 	session_start();
 	include('../conexao/conexao.php');
 
-	$usuarios_autenticado = false;
+$sql = mysqli_query($conexao, "SELECT * FROM usuarios WHERE email='".$_POST['email']."' AND senha='".$_POST['senha']."'") or die("Erro de conexão");
+	$linhas = mysqli_num_rows($sql);
 
-	$email = $_POST['email'];
-	$senha = $_POST['senha'];
-	
-	$sql = "SELECT email, senha FROM usuarios WHERE email=$email";
-	$resultado = $con->query($sql);
-	$banco = $resultado->fetch_assoc();
-
-	if ($banco['email'] != $email && $banco['senha'] != $senha) {
-		header('Location: ../index.php?login=erro');
-		$usuarios_autenticado = false;
+	if ($linhas == '') {
+		header('Location: ../index.php');
 		$_SESSION['autenticado'] = 'NAO';
 	}else{
-		header('Location: question.php');
-		$usuarios_autenticado = true;
-		$_SESSION['autenticado'] = 'SIM';
-		$_SESSION['dados'] = $email;
+		while ($dados = mysqli_fetch_assoc($sql)) {
+			$_SESSION['nome_user'] = $dados['nome'];
+			$_SESSION['email_user'] = $dados['email'];
+			$_SESSION['autenticado'] = 'SIM';
+			header('Location: question.php');
+		}
 	}
-
-	$con->close();
-	
 ?>
