@@ -1,5 +1,6 @@
 <?php
-    require_once 'valida_acesso.php';
+require_once 'valida_acesso.php';
+include '../conexao/conexao.php';
 ?>
 
 <!DOCTYPE html>
@@ -17,7 +18,24 @@
 
 <body>
 
-    <h1>Area de Perfil</h1>
+    <?php
+
+    $db = mysqli_select_db($conexao, "unihelp");
+
+    //criando a query de consulta à tabela criada 
+    $sql = mysqli_query($conexao, "SELECT * FROM usuarios") or die(mysqli_error($conexao) //caso haja um erro na consulta 
+    );
+
+    //pecorrendo os registros da consulta. 
+    while ($aux = mysqli_fetch_assoc($sql)) {
+        echo "-----------------------------------------<br />";
+        echo "Nome: " . $aux["nome"] . "<br />";
+        echo "Sobrenome: " . $aux["sobrenome"] . "<br />";
+        echo "Curso: " . $aux["curso"] . "<br />";
+        echo "Email: " . $aux["email"] . "<br />";
+        echo "Senha: " . $aux["senha"] . "<br />";
+    }
+    ?>
 
 </body>
 
