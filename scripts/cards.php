@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,13 +9,6 @@
     <title>Cards</title>
 </head>
 <body>
-    <main class="cards">
-        <section class="card contact">
-            <h3>Contact us</h3>
-            <span>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</span>
-            <button>Learn More</button>
-        </section>
-        
-    </main>
+    
 </body>
 </html>

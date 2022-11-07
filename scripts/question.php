@@ -1,7 +1,5 @@
 <?php
-
-    //include "validador_acesso.php";
-
+    require_once "valida_acesso.php";
 ?>
 
 <!DOCTYPE html>
@@ -38,8 +36,8 @@
                     <ul>
                         <li class="link"><a class="dados" href="?page=perfil">Perfil</a></li>
                         <li class="link"><a class="dados" href="?page=duvidas">Dúvidas</a></li>
+                        <li class="link"><a class="dados" href="question.php">Voltar</a></li>
                         <li class="link"><a class="dados" href="logout.php">Sair</a></li>
-                        <li class="link"><a class="dados" href="valida_acesso.php">teste</a></li>
                     </ul>
                 </nav>
             </div>
@@ -48,7 +46,7 @@
 
         <div>
             <?php
-            include("conexao.php");
+            include('../conexao/conexao.php');
 
             switch (@$_REQUEST['page']) {
                 case "perfil":

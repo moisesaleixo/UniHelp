@@ -1,10 +1,16 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
 /* Card de cadastro de dúvidas */
 .card_container{
     width: 350px;
     padding: 10px;
     border: 1px solid red;
     border-radius: 15px;
-    margin: 100px auto;
+    margin: 0px auto;
 }
 
 .card_form{
@@ -21,70 +27,3 @@
     padding: 5px 10px;
     border-radius: 15px;
 }
-
-/*  
-
-body{
-    background-color: #f6f9ff;
-    height: 100%;
-    width: 100%;
-
-    display: flex;
-    justify-content: center;
-    
-    color: #434343;
-}
-
-main.cards{
-    display: flex;
-    padding: 32px;
-}
-
-main.cards section.card{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    background: white;
-    padding: 1rem 1.5rem;
-    border-radius: 8px;
-    max-width: 256px;
-    margin-left: 32px;
-}
-
-main.cards section.card .icon{
-    width: 64px;
-    height: 64px;
-}
-
-main.cards section.card h3{
-    margin: 16px 0;
-    font-size: 100%;
-}
-
-main.cards section.card span{
-    font-weight: 300;
-    max-width: 240px;
-    font-size: 80%;
-    margin-bottom: 16px;
-}
-
-main.cards section.card button{
-    padding: 0.5rem 1rem;
-    text-transform: uppercase;
-    border-radius: 32px;
-    border: 0;
-    cursor: pointer;
-    font-size: 80%;
-    font-weight: 500;
-    color: white;
-}
-
-main.cards section.card.contact button{
-    background: linear-gradient(to right, #9f66ff, #dfcbff);
-}
-
-main.cards section.card.contact{
-    box-shadow: 20px 20px 50px -30px #dbc4ff;
-}
-*/
