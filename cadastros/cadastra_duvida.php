@@ -3,7 +3,6 @@
     include "../conexao/conexao.php";
 
 	$duvida = $_GET['duvida'];
-	$id_email = $_SESSION['dados'];
 
 	echo "<pre>";
 	print_r($_SESSION);

@@ -1,3 +1,35 @@
-.perfil{
-    margin-top: 90px;
+section{
+    border: 2px solid red;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
 }
+
+.nome, .curso, .email{
+    display: inline-flex;
+    margin-top: 20px;
+}
+
+.nome h2, .curso h2, .email h2{
+    margin-left: 15px;
+}
+
+section h2{
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+section span h2{
+    font-weight: normal;
+    font-size: 1.5rem;
+}
+
+form div .nomes{
+    display: inline-flex;
+    font-size: 1.2rem;
+    padding: 5px;
+}
+

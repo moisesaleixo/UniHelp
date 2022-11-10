@@ -1,3 +1,9 @@
+<?php
+    
+    $hora = date('d/m/Y');
+
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -34,6 +40,7 @@
                 <form class="form_cadastro" action="valida_cadastro.php" method="post" width: 50vw;>
                     <input class="superior detalhe" type="text" name="nome" id="" placeholder="Nome">
                     <input class="detalhe" type="text" name="sobrenome" id="" placeholder="Sobrenome">
+                    <input type="Date" name="data_nasc" class="detalhe" placeholder="00-00-0000" value="<? echo $hora;?>">
                     <input class="detalhe" type="text" name="curso" id="" placeholder="Curso">
                     <input class="detalhe" type="text" name="email" id="" placeholder="Email">
                     <input class="detalhe" type="password" name="senha" id="" placeholder="Senha">
