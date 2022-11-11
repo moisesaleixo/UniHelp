@@ -49,7 +49,6 @@
             </div>
                 <div class="email">
                     <h2>Email:</h2> <?= "<span><h2> " . $aux['email'] . " </h2></span>"; ?>
-                    <h2>Senha:</h2> <?= "<span><h2>".$aux['senha']."</h2></span>";?>
                 </div>
         </section>
 

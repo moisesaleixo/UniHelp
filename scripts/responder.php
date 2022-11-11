@@ -75,10 +75,10 @@
 		<?php		
 			}
 		?>
-			<section class="form">
-				<form action="../cadastros/comentario.php" method="POST">
-					<input type="text" name="resposta" placeholder="Sua resposta aqui...">
-					<button class="botao_comentario" type="submit">Responder</button>
+			<section class="responder">
+				<form action="../cadastros/comentario.php" method="POST" class="form_resposta">
+					<input class="texto" type="text" name="resposta" placeholder="Sua resposta aqui...">
+					<input class="btn" type="submit" value="Responder">
 				</form>
 			</section>
 
