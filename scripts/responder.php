@@ -44,8 +44,8 @@
                 <nav>
                     <ul>
                         <li class="link"><a class="dados" href="question.php?page-perfil">Perfil</a></li>
-                        <li class="link"><a class="dados" href="question.php?page=duvida">Dúvidas</a></li>
-                        <li class="link"><a class="dados" href="question.php">Voltar</a></li>
+                        <li class="link"><a class="dados" href="question.php?page=duvidas">Dúvidas</a></li>
+                        <li class="link"><a class="dados" href="question.php">Inicio</a></li>
                         <li class="link"><a class="dados" href="logout.php">Sair</a></li>
                     </ul>
                 </nav>
@@ -53,9 +53,11 @@
         </header>
 
 		<?php
-			$idDuvida = $_GET['id'];
+		
+			$_SESSION['id'] = $_GET['id'];
+			$id = $_SESSION['id'];
 
-			$sql = mysqli_query($conexao, "SELECT * FROM duvidas WHERE id_duvida='".$idDuvida."'") or die('Erro!');
+			$sql = mysqli_query($conexao, "SELECT * FROM duvidas WHERE id_duvida='". $id ."'") or die('Erro!');
 			while ($duvida = mysqli_fetch_assoc($sql)) { ?>
 				<section class="container_resposta">
 					<div class="card_principal">
@@ -79,6 +81,29 @@
 					<button type="submit">Responder</button>
 				</form>
 			</section>
+
+			<?php
+				$id = $_SESSION['id'];
+
+				$sql = mysqli_query($conexao, "SELECT * FROM respostas WHERE id_duvida='" . $id . "'");
+				while ($puxa = mysqli_fetch_assoc($sql)) { ?>
+				
+					<section class="resposta">
+						<div class="resposta_barra">
+							<div class="email">
+								<h3><?= $puxa['email']; ?></h3>
+							</div>
+							<div class="comentario">
+								<p><?= $puxa['resposta']; ?></p>
+							</div>
+						</div>
+					</section>
+			<?php	
+				}
+			?>
+
+
+			
     </main>
 
 </body>

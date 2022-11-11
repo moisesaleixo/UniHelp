@@ -1,10 +1,7 @@
 <?php
 require_once "valida_acesso.php";
 include "../conexao/conexao.php";
-/*
-    $busca = $_GET['busca'];
-    $sql = mysqli_query($conexao, "SELECT * FROM duvidas WHERE titulo LIKE '%$busca%' ") or die("Erro!");
-    */
+
 ?>
 
 <!DOCTYPE html>

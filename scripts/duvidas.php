@@ -15,7 +15,7 @@
             $sql = mysqli_query($conexao, "SELECT * FROM duvidas ORDER BY id_duvida DESC");
 
             while ($chama = mysqli_fetch_assoc($sql)) { 
-                $id_duvida = $chama['id_duvida'];
+                $idDuvida = $chama['id_duvida'];
                 $titulo = $chama['titulo'];
                 $email = $chama['email'];
                 $duvida = $chama['duvida'];
@@ -23,7 +23,7 @@
                 
                 <div class="card">
                     <div class="titulo_duvida">
-                        <h4>identificador: <?= $id_duvida; ?></h4>
+                        <h4>identificador: <?= $idDuvida; ?></h4>
                         <h3>Título: <span><?= $titulo; ?></span></h3>
                         <h3>Usuários: <span><?= $email; ?></span></h3>
                     </div>
@@ -31,7 +31,7 @@
                         <h3>Dúvida: </h3>
                         <p><?= $duvida; ?></p>
                     </div>
-                    <a href="responder.php?id=<?= $id_duvida; ?>"><button>Responder</button></a>
+                    <a href="responder.php?id=<?=$idDuvida;?>"><button>Responder</button></a>
                 </div>
              
         <?php   

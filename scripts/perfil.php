@@ -28,7 +28,6 @@
 </head>
 
 <body>
-
     <?php
     $id_email = $_SESSION['email_user'];
 

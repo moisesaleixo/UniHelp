@@ -2,6 +2,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow-x: hidden;
 }
 
 .container_resposta{
@@ -77,4 +78,29 @@ form button{
     padding: 5px;
     width: 100px;
     margin-top: 10px;
+}
+
+.resposta{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    padding: 5px;
+    width: 100vw;
+}
+
+.resposta .resposta_barra{
+    position: relative;
+    padding: 10px;
+    width: 500px;
+    border: 1px solid black;
+}
+
+.resposta div{
+    padding: 3px;
+}
+
+.resposta div:first-child{
+    border-bottom: 1px solid black;
 }
