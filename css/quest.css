@@ -63,10 +63,17 @@ header nav ul li a:hover::before{
 }
 
 /* Barra de pesquisa  */
-.barra_busca{
+.barra_busca, button{
     padding: 5px;
     width: 300px;
+
     border: none;
+    border-bottom: 1px solid gray;
     background: none;
     border-bottom: 1px;
+}
+
+button{
+    width: 30px;
+    position: absolute;
 }

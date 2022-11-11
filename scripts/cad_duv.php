@@ -48,5 +48,36 @@
             }
         ?>
 
+        <section class="cadastradas">
+        <?php
+
+            $id_email_user = $_SESSION['email_user'];
+
+            $sql = mysqli_query($conexao, "SELECT * FROM duvidas WHERE email='".$id_email_user."'");
+
+            while ($chama = mysqli_fetch_assoc($sql)) { 
+                $idDuvida = $chama['id_duvida'];
+                $titulo = $chama['titulo'];
+                $email = $chama['email'];
+                $duvida = $chama['duvida'];
+                ?>
+                
+                <div class="card">
+                    <div class="titulo_duvida">
+                        <h3>Título: <span><a href="responder.php?id=<?=$idDuvida;?>"><?= $titulo; ?></a></span></h3>
+                        <h3>Postador: <span><?= $email; ?></span></h3>
+                    </div>
+                    <div class="texto_duvida">
+                        <h3>Dúvida: </h3>
+                        <p><?= $duvida; ?></p>
+                    </div>
+                    <a class="link_botao" href="responder.php?id=<?=$idDuvida;?>">Ver Respostas</a>
+                </div>
+             
+        <?php   
+            }
+        ?>
+    </section>
+
 </body>
 </html>

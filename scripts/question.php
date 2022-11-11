@@ -44,6 +44,7 @@ include "../conexao/conexao.php";
             <div id="barra">
                 <form action="question.php">
                     <input type="text" placeholder="Buscar..." class="barra_busca" name="busca">
+                    <button type="submit"><img src="../pictures/lupa2.png" width="20px"></button>
                 </form>
             </div>
 
@@ -76,7 +77,7 @@ include "../conexao/conexao.php";
                     break;
                 default:
                     if (!isset($_GET['busca'])) { ?>
-                        <p class="error">Digite algo se quiser pesquisar</p>
+                        <p class="pesquisa">Digite algo se quiser pesquisar</p>
                         <?php } else {
                         $busca = $_GET['busca'];
                         $sql = mysqli_query($conexao, "SELECT * FROM duvidas WHERE titulo LIKE '%$busca%' ") or die("Erro!");
@@ -85,8 +86,7 @@ include "../conexao/conexao.php";
                             <section class="container_busca">
                                 <div class="card_busca">
                                     <div class="dados_busca">
-                                        <h4>Identificador: <?= $dado['id_duvida']; ?></h4>
-                                        <h3>Título: <?= $dado['titulo']; ?></h3>
+                                        <h3>Título: <a href="responder.php?id=<?=$dado['id_duvida'];?>"><?= $dado['titulo']; ?></a></h3>
                                         <h3>Usuário: <?= $dado['email']; ?></h3>
                                     </div>
                                     <div class="texto__busca">

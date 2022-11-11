@@ -77,8 +77,8 @@
 		?>
 			<section class="form">
 				<form action="../cadastros/comentario.php" method="POST">
-					<input type="text" name="resposta" placeholder="">
-					<button type="submit">Responder</button>
+					<input type="text" name="resposta" placeholder="Sua resposta aqui...">
+					<button class="botao_comentario" type="submit">Responder</button>
 				</form>
 			</section>
 

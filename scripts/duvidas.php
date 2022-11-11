@@ -23,20 +23,23 @@
                 
                 <div class="card">
                     <div class="titulo_duvida">
-                        <h4>identificador: <?= $idDuvida; ?></h4>
-                        <h3>Título: <span><?= $titulo; ?></span></h3>
-                        <h3>Usuários: <span><?= $email; ?></span></h3>
+                        <h3>Título: <span><a href="responder.php?id=<?=$idDuvida;?>"><?= $titulo; ?></a></span></h3>
+                        <h3>Postador: <span><?= $email; ?></span></h3>
                     </div>
                     <div class="texto_duvida">
                         <h3>Dúvida: </h3>
                         <p><?= $duvida; ?></p>
                     </div>
-                    <a href="responder.php?id=<?=$idDuvida;?>"><button>Responder</button></a>
+                    <a class="link_botao" href="responder.php?id=<?=$idDuvida;?>">Responder</a>
                 </div>
              
         <?php   
             }
         ?>
+    </section>
+
+    <section>
+
     </section>
 
 </body>

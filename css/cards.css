@@ -14,7 +14,7 @@ body{
 .card_container{
     width: 350px;
     padding: 10px;
-    border: 1px solid red;
+    border: 1px solid black;
     border-radius: 15px;
     margin: 10px auto;
 }
@@ -49,6 +49,7 @@ body{
     position: relative;
     padding: 10px;
     width: 300px;
+    height: 100%;
     background-color: skyblue;
     margin: 20px;
     border: 1px solid black;
@@ -72,11 +73,31 @@ body{
     width: 100%;
 }
 
+.link_botao{
+    text-decoration: none;
+    color: black;
+    border: 1px solid black;
+    padding: 3px;
+    width: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    background-color: white;
+}
+
+.link_botao:hover{
+    background-color: gray;
+    color: white;
+    transition: .5s ease-in-out;
+}
+
 /* -------------------------- */
 .container_busca{
     width: 100vw;
     padding: 20px;
-    display: inline-flex;
+    display: flex;
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
@@ -85,9 +106,24 @@ body{
 .card_busca{
     position: relative;
     padding: 10px;
-    width: 30px;
-    background-color: lightpink;
-    margin: 10px;
-    border: 1px solid blue;
-    border-radius: 10px;
+    width: 300px;
+    background-color: skyblue;
+    margin: 20px;
+    border: 1px solid black;
+    border-radius: 20px;
+    overflow: hidden;
+    transition: .5s;
+    word-wrap: break-word;
+}
+
+/* Cards de exibição */
+.pesquisa{
+    background-color: lightgreen;
+    color: black;
+    text-align: center;
+    justify-content: center;
+    border-radius: 30px;
+    padding: 5px;
+    width: 350px;
+    margin: 0 auto;
 }
