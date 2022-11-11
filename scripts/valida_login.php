@@ -2,7 +2,7 @@
 	session_start();
 	include('../conexao/conexao.php');
 
-$sql = mysqli_query($conexao, "SELECT * FROM usuarios WHERE email='".$_POST['email']."' AND senha='".$_POST['senha']."'") or die("Erro de conexão");
+	$sql = mysqli_query($conexao, "SELECT * FROM usuarios WHERE email='".$_POST['email']."' AND senha='".$_POST['senha']."'") or die("Erro de conexão");
 	$linhas = mysqli_num_rows($sql);
 
 	if ($linhas == '') {

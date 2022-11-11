@@ -4,6 +4,12 @@
     box-sizing: border-box;
 }
 
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 /* Card de cadastro de dúvidas */
 .card_container{
     width: 350px;
@@ -26,4 +32,62 @@
 .card_form textarea{
     padding: 5px 10px;
     border-radius: 15px;
+}
+
+/* --------------------------------- */
+
+.cadastradas{
+    width: 100vw;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.cadastradas .card{
+    position: relative;
+    padding: 10px;
+    width: 300px;
+    background-color: skyblue;
+    margin: 20px;
+    border: 1px solid black;
+    border-radius: 20px;
+    overflow: hidden;
+    transition: .5s;
+}
+
+.titulo_duvida h3{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.titulo_duvida span{
+    font-size: 20px;
+    font-weight: normal;
+}
+
+.texto_duvida{
+    border-top: 2px solid black;
+    width: 100%;
+}
+
+/* -------------------------- */
+.container_busca{
+    width: 100vw;
+    padding: 20px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.card_busca{
+    position: relative;
+    padding: 10px;
+    width: 30px;
+    background-color: lightpink;
+    margin: 10px;
+    border: 1px solid blue;
+    border-radius: 10px;
 }

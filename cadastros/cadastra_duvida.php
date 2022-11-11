@@ -2,19 +2,16 @@
     session_start();
     include "../conexao/conexao.php";
 
+    $titulo = $_GET['titulo'];
 	$duvida = $_GET['duvida'];
+	$email_user = $_SESSION['email_user'];
 
-	echo "<pre>";
-	print_r($_SESSION);
-	echo "</pre>";
-/*
-	$sql = "INSERT INTO duvidas (duvida, id_email) 
-	VALUES ('{$duvida}', '{$id_email}')";
-
-	$resultado = $con->query($sql);
-
-	$con->close();
-
-	header("Location: ../scripts/question.php");
-*/
+	if (empty($duvida) || empty($email_user)) {
+		header('Location: ../scripts/cad_duv.php?page=duvidas?sem=nada');
+	}else{
+		$in = mysqli_query($conexao, "INSERT INTO duvidas (titulo , duvida, email) VALUES ('$titulo' 
+			, '$duvida', '$email_user')");
+		header('Location: ../scripts/question.php');
+	}
+	
 ?>

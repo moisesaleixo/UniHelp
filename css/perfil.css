@@ -1,6 +1,4 @@
 section{
-    border: 2px solid red;
-
     display: flex;
     align-items: center;
     justify-content: center;
@@ -8,12 +6,12 @@ section{
     flex-direction: column;
 }
 
-.nome, .curso, .email{
+.nome, .data, .curso, .email{
     display: inline-flex;
     margin-top: 20px;
 }
 
-.nome h2, .curso h2, .email h2{
+.nome h2, .data h2, .curso h2, .email h2{
     margin-left: 15px;
 }
 
@@ -22,14 +20,26 @@ section h2{
     font-size: 1.5rem;
 }
 
-section span h2{
-    font-weight: normal;
+section span{
+    font-size: normal;
+    font-size: 1.5rem;
+    color: grey;
+}
+
+.altera_dados{
+    margin-top: 30px;
+}
+
+.altera_dados div{
+    margin-top: 15px;
     font-size: 1.5rem;
 }
 
-form div .nomes{
-    display: inline-flex;
-    font-size: 1.2rem;
+.botao_atualizar{
     padding: 5px;
+    font-size: 1.3rem;
 }
 
+.altera_dados input{
+    font-size: 1.2rem;
+}

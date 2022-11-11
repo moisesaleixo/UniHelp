@@ -45,7 +45,11 @@
                 <div id="fundo_direita">
                     <form action="scripts/valida_login.php" method="post" width: 50vw;>
                             <input class="superior detalhe" type="email" name="email" id="" placeholder="E-mail">
-                            <input class="detalhe" type="password" name="senha" id="" placeholder="Senha">
+                            <input class="detalhe" type="password" name="senha" id="" placeholder="Senha">            
+                            <div>
+                                <button type="submit" class="buttom">Entrar</button>
+                            </div>
+                    </form>
                             <?php
                                 if (isset($_GET['login']) && $_GET['login'] == 'erro'){
                             ?>
@@ -55,11 +59,6 @@
                             <?php
                                 }
                             ?>
-            
-                            <div>
-                                <button type="submit" class="buttom">Entrar</button>
-                            </div>
-                    </form>
                 </div>
             </section><!--fim Login-->
         </main>
