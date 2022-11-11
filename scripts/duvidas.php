@@ -10,7 +10,7 @@
     <section class="cadastradas">
         <?php
 
-            $id_email_user = !$_SESSION['email_user'];
+            $id_email_user = $_SESSION['email_user'];
 
             $sql = mysqli_query($conexao, "SELECT * FROM duvidas ORDER BY id_duvida DESC");
 
@@ -31,7 +31,7 @@
                         <h3>Dúvida: </h3>
                         <p><?= $duvida; ?></p>
                     </div>
-                    <a href="responder.php"><button>Responder</button></a>
+                    <a href="responder.php?id=<?= $id_duvida; ?>"><button>Responder</button></a>
                 </div>
              
         <?php   
