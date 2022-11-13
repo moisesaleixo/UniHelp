@@ -1,4 +1,6 @@
 <?php
+
+	# Fas a requisição de páginas que serão usadas depois
     require_once "valida_acesso.php";
     include "../conexao/conexao.php";
 ?>
@@ -12,7 +14,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Respostas</title>
     <link rel="stylesheet" type="text/css" href="../css/quest.css">
-    <link rel="shortcut icon" href="../pictures/ponto-de-interrogacao.png" type="image/x-icon">
+    <link rel="shortcut icon" href="../pictures/icon.png" type="image/x-icon">
 	<link rel="stylesheet" href="../css/respostas.css">
     <style type="text/css">
         .error{
@@ -32,37 +34,40 @@
 <body>
 
     <main>
+    	<!-- Área de cabeçalho -->
         <header>
-            <!--Cabeçalho-->
             <div class="logo">
-                <!--logo-->
-                <a href="question.php"><img src="../pictures/logo2.png" alt=""></a>
+                <a href="question.php"><img src="../pictures/logo.png" alt=""></a>
             </div>
-            <!--fim logo-->
 
             <div>
                 <nav>
                     <ul>
                         <li class="link"><a class="dados" href="question.php?page-perfil">Perfil</a></li>
                         <li class="link"><a class="dados" href="question.php?page=duvidas">Dúvidas</a></li>
-                        <li class="link"><a class="dados" href="question.php">Inicio</a></li>
+                        <li class="link"><a class="dados" href="question.php">Voltar</a></li>
                         <li class="link"><a class="dados" href="logout.php">Sair</a></li>
                     </ul>
                 </nav>
             </div>
         </header>
+        <!-- Fim da área de cabeçalho -->
 
 		<?php
-		
+			# Atribui valor a uma sessão e atribui o valor da sessão a uma variável
 			$_SESSION['id'] = $_GET['id'];
 			$id = $_SESSION['id'];
 
+			# Busca no banco as dúvidas com o id coletado pela sessão
 			$sql = mysqli_query($conexao, "SELECT * FROM duvidas WHERE id_duvida='". $id ."'") or die('Erro!');
+
+			# Exibe os dados encontrados no banco atribuidos a uma variável
 			while ($duvida = mysqli_fetch_assoc($sql)) { ?>
+
+				<!-- Exibe os dados dá dúvida chamados pelo ID -->
 				<section class="container_resposta">
 					<div class="card_principal">
 						<div class="card_inicio">
-							<h3>Id dúvida: <span><?= $duvida['id_duvida']; ?></span></h3>
 							<h3>Usuário: <span><?= $duvida['email']; ?></span></h3>
 							<h3>Título: <span><?= $duvida['titulo']; ?></span></h3>
 						</div>
@@ -72,38 +77,42 @@
 						</div>
 					</div>
 				</section>
-		<?php		
-			}
-		?>
-			<section class="responder">
-				<form action="../cadastros/comentario.php" method="POST" class="form_resposta">
-					<input class="texto" type="text" name="resposta" placeholder="Sua resposta aqui...">
-					<input class="btn" type="submit" value="Responder">
-				</form>
-			</section>
+		<?php } ?>
 
+		<!-- Cria o campo para dar a resposta para a dúvida chamada -->
+		<section class="responder">
+			<form action="../cadastros/comentario.php" method="POST" class="form_resposta">
+				<input class="texto" type="text" name="resposta" placeholder="Sua resposta aqui...">
+				<input class="btn" type="submit" value="Responder">
+			</form>
+		</section>
+		<!-- Fim do cria o campo para dar a resposta para a dúvida chamada -->
+
+		<!-- Local que exibe as respostadas dadas -->
+		<section class="resposta">
 			<?php
+				# Pega o ID da dúvida chamada
 				$id = $_SESSION['id'];
 
+				# Busca no banco as respostas atribuidas a determinada dúvida
 				$sql = mysqli_query($conexao, "SELECT * FROM respostas WHERE id_duvida='" . $id . "'");
-				while ($puxa = mysqli_fetch_assoc($sql)) { ?>
 				
-					<section class="resposta">
-						<div class="resposta_barra">
-							<div class="email">
-								<h3><?= $puxa['email']; ?></h3>
-							</div>
-							<div class="comentario">
-								<p><?= $puxa['resposta']; ?></p>
-							</div>
+				# Chama as respostas atribuidas a determinada dúvida
+				while ($puxa = mysqli_fetch_assoc($sql)) { ?>
+						
+					<!-- Exibe as respostas encontradas -->	
+					<div class="resposta_barra">
+						<div class="email">
+							<h3><?= $puxa['email']; ?></h3>
 						</div>
-					</section>
-			<?php	
-				}
-			?>
+						<div class="comentario">
+							<p><?= $puxa['resposta']; ?></p>
+						</div>
+					</div>
+			<?php } ?>
+		</section>
+		<!-- Fim do local que exibe as respostadas dadas -->
 
-
-			
     </main>
 
 </body>

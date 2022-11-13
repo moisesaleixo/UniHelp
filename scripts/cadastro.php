@@ -23,26 +23,33 @@
 <body>
     
     <main>
-        <section id="esquerda"><!--fundo da esquerda-->
-            <img src="../imagens_modelo/earth-5272550_1280.png" alt="">
-        </section><!--fundo da esquerda-->
+        <!-- Sessão que coloca a imagem na tela de login -->
+        <section id="esquerda">
+            <img src="../pictures/planeta.png" alt="">
+        </section>
+        <!-- Fim da sessão que coloca a imagem na tela de login -->
 
-        <section id="direita"><!--Cadastro-->
-            <div><!--fundo direita-->
-                <div><!--Dados-->
+        <!-- Sessão que coloca os campos para fazer o cadastro -->
+        <section id="direita">
+            <!-- Área que coloca a logo e os links de direcionamento nas telas de login e cadastro -->
+            <div>
+                <div>
                     <div>
-                        <div class="logo logo_cadastro"><!--Logo-->
+                        <div class="logo logo_cadastro">
                             <h1>UniHelp</h1>
-                        </div><!--Logo-->
-                        <nav class="links_pages"><!--Links-->
+                        </div>
+                        <nav class="links_pages">
                             <a href="../index.php">Entrar</a>
                             <h3>ou</h3>
                             <a href="cadastro.php">Cadastrar</a>
-                        </n><!--Links-->
+                        </nav>
                     </div>
-                </div><!--Dados-->
-            </div><!--fundo direita-->
-            <div id="fundo_direita"><!--formulário-->
+                </div>
+            </div>
+            <!-- Fim da área que coloca a logo e os links de direcionamento nas telas de login e cadastro -->
+
+            <!-- Área que coloca os campos para se cadastrar -->
+            <div id="fundo_direita">
                 <form class="form_cadastro" action="valida_cadastro.php" method="post" width: 50vw;>
                     <input class="superior detalhe" type="text" name="nome" id="" placeholder="Nome">
                     <input class="detalhe" type="text" name="sobrenome" id="" placeholder="Sobrenome">
@@ -52,21 +59,16 @@
                     <input class="detalhe" type="password" name="senha" id="" placeholder="Senha">
                     <div><!--Botão Envias-->
                         <input type="submit" value="Cadastrar" type="submit" class="buttom">
-                        <a href="../index.php" class="buttom_voltar">Voltar</a>
+                        <a href="../index.php" class="buttom">Voltar</a>
                     </div><!--Botão Envias-->
                 </form>
-                    <?php
-                        if (isset($_GET['falta']) && $_GET['falta'] == 'dados'){
-                    ?>
-                        <div>
-                            <p class="error">Dados incompletos</p>
-                        </div>
-                    <?php
-                        }
-                    ?>
-            </div><!--formulário-->
-        </section><!--Cadastro-->
+                    <?php if (isset($_GET['falta']) && $_GET['falta'] == 'dados'){ ?>
+                        <div><p class="error">Dados incompletos</p></div>
+                    <?php } ?>
+            </div>
+            <!-- Fim da área que coloca os campos para se cadastrar -->
+        </section>
+        <!-- Fim da sessão que coloca os campos para fazer o cadastro -->
     </main>
-
 </body>
 </html>

@@ -1,4 +1,6 @@
 <?php
+
+    # Inclusao de página e inicializando uma sessão
     require_once('valida_acesso.php');
 ?>
 
@@ -28,33 +30,31 @@
 </head>
 <body>
 
-        <section class="card_container">
-            <form action="../cadastros/cadastra_duvida.php" method="get" class="card_form">
-                <label>Título</label>
-                <input type="text" name="titulo">
-                <label for="">Dúvida</label>
-                <textarea name="duvida" id="" cols="30" rows="3" placeholder="Sua dúvida aqui em 1000 caracteres" maxlength="1000"></textarea>
-                <input type="submit" value="Cadastrar dúvida">
-            </form>
-        </section>
+    <!-- Sessão com formulário de cadastro para dúvidas -->
+    <section class="card_container">
+        <form action="../cadastros/cadastra_duvida.php" method="get" class="card_form">
+            <label>Título</label>
+            <input type="text" name="titulo">
+            <label for="">Dúvida</label>
+            <textarea name="duvida" id="" cols="30" rows="3" placeholder="Sua dúvida aqui em 1000 caracteres" maxlength="1000"></textarea>
+            <input type="submit" value="Cadastrar dúvida">
+        </form>
+    </section>
+    <!-- Fim da sessão com formulário de cadastro para dúvidas -->
 
-        <?php
-            if (isset($_GET['sem']) && $_GET['sem'] == 'nada'){
-        ?>
-                <div>
-                    <p class="error">Nenhuma dúvida foi colocada</p>
-                </div>
-        <?php
-            }
-        ?>
+    <!-- Dá a resposta se as dúvidas não forem cadastrados -->
+    <?php if (isset($_GET['sem']) && $_GET['sem'] == 'nada'){ ?>
+        <div><p class="error">Nenhuma dúvida foi colocada</p></div>
+    <?php } ?>
 
-        <section class="cadastradas">
+    <!-- Sessão que vai buscar no banco e retornar os dados que foram pedidos -->
+    <section class="cadastradas">
         <?php
-
+            # Procura no banco de dados todas as dúvidas cadastradas por determinado usuário
             $id_email_user = $_SESSION['email_user'];
-
             $sql = mysqli_query($conexao, "SELECT * FROM duvidas WHERE email='".$id_email_user."'");
 
+            # Faz a repetição chamando todas as dúvidas cadastradas
             while ($chama = mysqli_fetch_assoc($sql)) { 
                 $idDuvida = $chama['id_duvida'];
                 $titulo = $chama['titulo'];
@@ -62,6 +62,7 @@
                 $duvida = $chama['duvida'];
                 ?>
                 
+                <!-- Exibe os dados que foram encontrados no banco -->
                 <div class="card">
                     <div class="titulo_duvida">
                         <h3>Título: <span><a href="responder.php?id=<?=$idDuvida;?>"><?= $titulo; ?></a></span></h3>
@@ -73,10 +74,7 @@
                     </div>
                     <a class="link_botao" href="responder.php?id=<?=$idDuvida;?>">Ver Respostas</a>
                 </div>
-             
-        <?php   
-            }
-        ?>
+        <?php } ?>
     </section>
 
 </body>

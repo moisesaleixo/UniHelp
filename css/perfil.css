@@ -1,3 +1,4 @@
+/* Sessão da página de perfil */
 section{
     display: flex;
     align-items: center;
@@ -6,15 +7,18 @@ section{
     flex-direction: column;
 }
 
+/* Deixando os dados lado a lado */
 .nome, .data, .curso, .email{
     display: inline-flex;
     margin-top: 20px;
 }
 
+/* Distanciamento dos dados */
 .nome h2, .data h2, .curso h2, .email h2{
     margin-left: 15px;
 }
 
+/* Estilo das letras da área de perfil */
 section h2{
     font-weight: bold;
     font-size: 1.5rem;
@@ -26,6 +30,7 @@ section span{
     color: grey;
 }
 
+/* Sessão com form de atualização dos dados */
 .altera_dados{
     margin-top: 30px;
 }

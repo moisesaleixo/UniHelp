@@ -1,4 +1,5 @@
 <?php
+    # Faz a requisição de páginas para usar em algumas funções
     require_once 'valida_acesso.php';
     include '../conexao/conexao.php';
 ?>
@@ -11,7 +12,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="../css/perfil.css">
-    <link rel="shortcut icon" href="../pictures/ponto-de-interrogacao" type="image/x-icon">
+    <link rel="shortcut icon" href="../pictures/icon.png" type="image/x-icon">
     <style type="text/css">
         .error{
             background-color: lightpink;
@@ -29,14 +30,17 @@
 
 <body>
     <?php
-    $id_email = $_SESSION['email_user'];
+    # Pega o valor da sessão email_user e atribui a uma variável
+    $email_user = $_SESSION['email_user']; // A sessão tem o email do usuário logado
 
-    $sql = mysqli_query($conexao, "SELECT * FROM usuarios WHERE email='" . $id_email . "'") or die(mysqli_error($conexao));
+    # Busca no banco os dados pertencentes ao usuário logado
+    $sql = mysqli_query($conexao, "SELECT * FROM usuarios WHERE email='". $email_user ."'") or die(mysqli_error($conexao));
 
+    # Chama os dados pertencentes a determinado email
     while ($aux = mysqli_fetch_assoc($sql)) {  ?>
 
-        <section class="dados_banco">
-            
+        <!-- Exibe os dados do usuário que está logado -->
+        <section class="dados_banco">        
             <div class="nome">
                 <h2>Nome:</h2> <?= "<span><h2> " . $aux['nome'] . " </h2></span>"; ?>
                 <h2>Sobrenome:</h2> <?= "<span><h2> " . $aux['sobrenome'] . " </h2></span>"; ?>
@@ -53,6 +57,8 @@
         </section>
 
     <?php } ?>
+
+        <!-- Formulário para atualizar os dados do usuário logado -->
         <section class="altera_dados">
             <form method="post" action="../cadastros/atualiza.php">
                 <div>
@@ -81,15 +87,9 @@
             </form>
         </section>
 
-        <?php
-            if (isset($_GET['preencher']) && $_GET['preencher'] == 'tudo'){
-        ?>
-                <div>
-                    <p class="error">Preencha todos os dados</p>
-                </div>
-        <?php
-            }
-        ?>
+        <?php if (isset($_GET['preencher']) && $_GET['preencher'] == 'tudo'){ ?>
+            <div><p class="error">Preencha todos os dados</p></div>
+        <?php } ?>
 
 </body>
 

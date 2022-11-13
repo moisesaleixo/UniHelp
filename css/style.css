@@ -1,4 +1,4 @@
-/* Variaveis */
+/* Variaveis de cores */
 :root{
     --cor-gradiente: linear-gradient(to bottom right, #011B4A 0%, #014F86 100%);
     --cor-detalhes-letras: gray;
@@ -23,21 +23,21 @@ main{
     justify-content: center;
 }
 
-/* Esquerda */
+/* Campo da esquerda */
 #esquerda img{
     display: flex;
     width: 50vw;
     height: 100vh;
 }
 
-/* Direita */
+/* Campo da direita */
 #direita{
     width: 50vw;
     height: 100vh;
     background: var(--cor-gradiente);
 }
 
-/* Posição na página */
+/* Posição da logo */
 .dados_ordem{
     margin-top: 20vh;
     font-size: 16px;
@@ -52,7 +52,7 @@ main{
     color: white;
 }
 
-/* Redirecionamento da página */
+/* Posição dos link de redirecionamento */
 .links_pages{
     display: flex;
     align-items: center;
@@ -86,7 +86,7 @@ nav a:hover::after{
     transition: .3s;
 }
 
-/* Formulário */
+/* Formulário de login*/
 form{
     display: flex;
     align-items: center;
@@ -127,7 +127,7 @@ form input{
     margin: 10px;
 }
 
-/* Botão */
+/* Botões das páginas de login e cadastro */
 .buttom{
     margin-top: 10vh;
     padding: 5px 10px;
@@ -137,6 +137,7 @@ form input{
     border: 1px solid gray;
     color: gray;
     text-align: center;
+    text-decoration: none;
 }
 
 .buttom:hover{
@@ -146,90 +147,16 @@ form input{
     color: black;
 }
 
-/* Esqueci a senha */
-.esqueci_senha{
-    text-decoration: none;
-    color: var(--cor-detalhes-letras);
-}
-
-.esqueci_senha:hover{
-    color: black;
-    transition: .1s;
-    text-decoration: underline;
-}
-
 /* Distanciamento da logo - Cadastro */
 .logo_cadastro{
     margin-top: 10%;
-}
-
-/* Cor do input das areas do conhecimento */
-select, option{
-    color: var(--cor-detalhes-letras);
 }
 
 /* Cor da escrita dos inputs */
 input{
     color: var(--cor-escrita);
 }
-
-/* Botão de voltar  */
-.buttom_voltar{
-    color: var(--cor-detalhes-letras);
-    text-decoration: none;
-    border: 1px solid gray;
-    padding: 5px 10px;
-    background: none;
-    border-radius: 30px;
-}
-
-.buttom_voltar:hover{
-    background-color: var(--cor-escrita);
-    font-weight: bold;
-    color: black;
-    transition: .2s;
-}
-
-/* Configurações do esqueci minha senha */
-#esqueci_senha_page{
-    display: flex;
-    background: var(--cor-gradiente);
-    width: 500px;
-    height: 100vh;
-    margin: 0 auto;
-}
-
-.esqueci_senha_page{
-    width: 250px;
-    height: 25px;
-    background: none;
-    border: none;
-    border-bottom: 1px solid gray;
-    padding: 10px;
-}
-
-.esqueci_senha_page:focus{
-    outline: 0;
-    border-bottom: 1px solid gray;
-    color: var(--cor-escrita);
-}
-
-.botao_esqueci_page{
-    width: 100px;
-    color: var(--cor-detalhes-letras);
-    background: none;
-    border: none;
-    border: 1px solid gray;
-    border-radius: 30px;
-    padding: 5px 10px;
-}
-
-.botao_esqueci_page:hover{
-    background: var(--cor-escrita);
-    color: black;
-    cursor: pointer;
-}
-
+/*
 p .aviso{
     background-color: lightpink;
     padding: 5px;

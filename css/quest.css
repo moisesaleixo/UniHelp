@@ -1,19 +1,18 @@
+/* Zerando as configurações dapágina */
 *{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
 
-/* Cabeçalho */
+/* Barra superior - Menu - Cabeçalho */
 header{
     top: 0;
     left: 0;
-
     width: 100vw;
     height: 80px;
     background: linear-gradient(to bottom right, #011B4A 0%, #014F86 100%);
     padding: 10px 40px;
-
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -71,9 +70,4 @@ header nav ul li a:hover::before{
     border-bottom: 1px solid gray;
     background: none;
     border-bottom: 1px;
-}
-
-button{
-    width: 30px;
-    position: absolute;
 }
